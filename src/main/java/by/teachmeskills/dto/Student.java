@@ -2,10 +2,12 @@ package by.teachmeskills.dto;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.experimental.Accessors;
 
 @Entity
 @Table(name = "student")
 @Data
+@Accessors(chain = true)
 public class Student {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -10,6 +10,7 @@ import org.hibernate.cfg.Configuration;
 
 @Log4j2
 public class HibernateClient {
+
     private static SessionFactory sessionFactory;
 
     private HibernateClient() {
@@ -29,7 +30,6 @@ public class HibernateClient {
         }
         return sessionFactory;
     }
-
 
     public static Student findById(int id) {
         try (Session session = getSessionFactory().openSession()) {
